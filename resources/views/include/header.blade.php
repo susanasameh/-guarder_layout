@@ -43,24 +43,30 @@
 
           <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
             <ul class="navbar-nav  ">
-                @if (isset($activeItem))
+                {{-- @if (isset($activeItem))
         <li class="active"><a href="#">{{ $activeItem }}</a></li>
     @else
         <li><a href="#"></a></li>
-    @endif
-              <li class="nav-item ">
+    @endif --}}
+    {{-- <li class="{{ request()->routeIs('#') ? 'active' : '' }}"></li> --}}
+              {{-- <li class="nav-item "> --}}
+                {{-- <li class="{{ request()->routeIs('index') ? 'active' : '' }}"> --}}
+                    <li class="nav-item {{ request()->routeIs('index') ? 'active' : '' }}">
                 <a class="nav-link" href="{{route('index')}}">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item">
+              {{-- <li class="nav-item"> --}}
+                <li class="nav-item {{ request()->routeIs('About') ? 'active' : '' }}">
                 <a class="nav-link" href="{{route('About')}}"> About</a>
               </li>
-              <li class="nav-item">
+
+              <li class="nav-item {{ request()->routeIs('service') ? 'active' : '' }}">
                 <a class="nav-link" href="{{route('service')}}"> Services </a>
               </li>
-              <li class="nav-item">
+
+              <li class="nav-item {{ request()->routeIs('guard') ? 'active' : '' }}">
                 <a class="nav-link" href="{{route('guard')}}"> Guards </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item {{ request()->routeIs('contact') ? 'active' : '' }}">
                 <a class="nav-link" href="{{route('contact')}}">Contact us</a>
               </li>
             </ul>
