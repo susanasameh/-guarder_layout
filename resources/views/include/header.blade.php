@@ -63,8 +63,8 @@
                 <a class="nav-link" href="{{route('service')}}"> Services </a>
               </li>
 
-              <li class="nav-item {{ request()->routeIs('guard') ? 'active' : '' }}">
-                <a class="nav-link" href="{{route('guard')}}"> Guards </a>
+              <li class="nav-item {{ request()->routeIs('guarder') ? 'active' : '' }}">
+                <a class="nav-link" href="{{route('guarder')}}"> Guards </a>
               </li>
               <li class="nav-item {{ request()->routeIs('contact') ? 'active' : '' }}">
                 <a class="nav-link" href="{{route('contact')}}">Contact us</a>

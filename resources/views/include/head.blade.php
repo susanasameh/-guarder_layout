@@ -10,7 +10,8 @@
     <meta name="author" content="" />
     <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
 
-    <title>Guarder</title>
+    {{-- <title>Guarder</title> --}}
+    <title>@yield('title')</title>
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.css')}}" />

@@ -22,7 +22,7 @@ Route::get('index',[Controller::class,('show')])->name('index');
 
 Route::get('About',[Controller::class,('about')])->name('About');
 
-Route::get('guard',[Controller::class,('guard')])->name('guard');
+Route::get('guarder',[Controller::class,('guarder')])->name('guarder');
 
 Route::get('service',[Controller::class,('service')])->name('service');
 
@@ -30,3 +30,11 @@ Route::get('contact',[Controller::class,('contact')])->name('contact');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
