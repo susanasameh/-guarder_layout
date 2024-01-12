@@ -13,20 +13,22 @@
       <div class="">
         <div class="row">
           <div class="col-md-7 mx-auto">
-            <form action="#">
+            <form action="{{route('contactMail')}}" method='post'>
+                @csrf
+
               <div class="contact_form-container">
                 <div>
                   <div>
-                    <input type="text" placeholder="Full Name" />
+                    <input type="text" name='name' placeholder="Full Name" />
                   </div>
                   <div>
-                    <input type="email" placeholder="Email " />
+                    <input type="email" name='email' placeholder="Email " />
                   </div>
                   <div>
-                    <input type="text" placeholder="Phone Number" />
+                    <input type="text" name='phone' placeholder="Phone Number" />
                   </div>
                   <div class="">
-                    <input type="text" placeholder="Message" class="message_input" />
+                    <input type="text" name='message' placeholder="Message" class="message_input" />
                   </div>
                   <div class="btn-box ">
                     <button type="submit">
