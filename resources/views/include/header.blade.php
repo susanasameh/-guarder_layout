@@ -17,7 +17,7 @@
           <a href="" class="contact_link2">
             <i class="fa fa-phone" aria-hidden="true"></i>
             <span>
-              Call : +01 1234567890
+                {{ __('contact.Call')}} : +01 1234567890
             </span>
           </a>
           <a href="" class="contact_link3">
@@ -34,7 +34,7 @@
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="index.html">
             <span>
-              Guarder
+                {{ __('contact.Guarder')}}
             </span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,23 +52,26 @@
               {{-- <li class="nav-item "> --}}
                 {{-- <li class="{{ request()->routeIs('index') ? 'active' : '' }}"> --}}
                     <li class="nav-item {{ request()->routeIs('index') ? 'active' : '' }}">
-                <a class="nav-link" href="{{route('index')}}">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{route('index')}}">{{ __('contact.Home')}} <span class="sr-only">(current)</span></a>
               </li>
               {{-- <li class="nav-item"> --}}
                 <li class="nav-item {{ request()->routeIs('About') ? 'active' : '' }}">
-                <a class="nav-link" href="{{route('About')}}"> About</a>
+                <a class="nav-link" href="{{route('About')}}"> {{ __('contact.About')}}</a>
               </li>
 
               <li class="nav-item {{ request()->routeIs('service') ? 'active' : '' }}">
-                <a class="nav-link" href="{{route('service')}}"> Services </a>
+                <a class="nav-link" href="{{route('service')}}"> {{ __('contact.Services')}} </a>
               </li>
 
               <li class="nav-item {{ request()->routeIs('guarder') ? 'active' : '' }}">
-                <a class="nav-link" href="{{route('guarder')}}"> Guards </a>
+                <a class="nav-link" href="{{route('guarder')}}"> {{ __('contact.Guards')}} </a>
               </li>
               <li class="nav-item {{ request()->routeIs('contact') ? 'active' : '' }}">
-                <a class="nav-link" href="{{route('contact')}}">Contact us</a>
+                <a class="nav-link" href="{{route('contact')}}">{{ __('contact.Contact us')}}</a>
               </li>
+
+              <li class="nav-item"><a class="nav-link" href="{{ LaravelLocalization::getLocalizedURL('en') }}">English</a></li>
+             <li class="nav-item"><a class="nav-link" href="{{ LaravelLocalization::getLocalizedURL('ar') }}">عربي</a></li>
             </ul>
           </div>
         </nav>

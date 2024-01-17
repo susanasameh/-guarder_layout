@@ -22,6 +22,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+    ], function(){
+
+
 Route::get('index',[Controller::class,('show')])->name('index');
 
 Route::get('About',[Controller::class,('about')])->name('About');
@@ -34,6 +41,7 @@ Route::get('contact',[Controller::class,('contact')])->name('contact');
 
 Route::post('contactMail',[Controller::class,('contactMailSend')])->name('contactMail');
 
+});
 
 Route::get('test30',[Controller::class,('getSession')]);
 
